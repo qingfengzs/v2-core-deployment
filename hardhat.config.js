@@ -1,5 +1,5 @@
 require("@nomiclabs/hardhat-waffle");
-
+require('hardhat-abi-exporter');
 
 task("accounts", "Prints the list of accounts", async() => {
     const accounts = await ethers.getSigners();
@@ -20,6 +20,16 @@ module.exports = {
     //         }
     //     }
     // },
+
+    abiExporter: {
+        path: './deployments/abi',
+        clear: true,
+        flat: true,
+        only: [],
+        spacing: 2,
+        pretty: true,
+    },
+
     networks: {
         dev: {
             url: "http://127.0.0.1:8545",
