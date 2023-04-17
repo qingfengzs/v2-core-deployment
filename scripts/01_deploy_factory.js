@@ -13,6 +13,12 @@ async function main() {
 
     let codeHash = await f.INIT_CODE_PAIR_HASH();
     console.log("UniswapV2Factory code hash: ", codeHash);
+
+    let f2 = await UniswapV2Factory.deploy(owner.address);
+    await f2.deployed();
+
+    console.log("UniswapV2Factory address: ", f.address);
+    await writeAddr(f.address, "UniswapV2Factory2", network.name);
 }
 
 // We recommend this pattern to be able to use async/await everywhere
