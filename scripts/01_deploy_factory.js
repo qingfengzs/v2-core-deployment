@@ -17,8 +17,8 @@ async function main() {
     let f2 = await UniswapV2Factory.deploy(owner.address);
     await f2.deployed();
 
-    console.log("UniswapV2Factory address: ", f.address);
-    await writeAddr(f.address, "UniswapV2Factory2", network.name);
+    console.log("UniswapV2Factory address: ", f2.address);
+    await writeAddr(f2.address, "UniswapV2Factory2", network.name);
 }
 
 // We recommend this pattern to be able to use async/await everywhere
