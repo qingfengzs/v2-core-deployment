@@ -1,5 +1,5 @@
-require('@nomiclabs/hardhat-waffle')
-require('hardhat-abi-exporter')
+require("@nomicfoundation/hardhat-toolbox");
+require('hardhat-abi-exporter');
 let dotenv = require('dotenv')
 dotenv.config({ path: './.env' })
 
@@ -41,8 +41,8 @@ module.exports = {
   networks: {
     hardhat: {},
     dev: {
-      url: 'http://127.0.0.1:8545',
-      chainId: 31337
+      url: 'http://127.0.0.1:7545',
+      chainId: 1337
     },
     goerli: {
       url: `https://eth-goerli.g.alchemy.com/v2/${alchemyApiKey}`,
@@ -57,6 +57,7 @@ module.exports = {
       accounts: [account]
     }
   },
+  defaultNetwork: 'dev',
   etherscan: {
     apiKey: `${etherscanKey}`
   },

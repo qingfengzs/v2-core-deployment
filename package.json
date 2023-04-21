@@ -28,13 +28,13 @@
     "@nomiclabs/hardhat-ethers": "^2.0.0",
     "@nomiclabs/hardhat-etherscan": "^3.0.0",
     "@nomiclabs/hardhat-waffle": "^2.0.3",
-    "hardhat-abi-exporter": "^2.10.1",
     "@types/chai": "^4.2.6",
     "@types/mocha": "^5.2.7",
     "chai": "^4.2.0",
     "ethereum-waffle": "^2.4.1",
     "ethers": "^5.4.0",
     "hardhat": "^2.9.1",
+    "hardhat-abi-exporter": "^2.10.1",
     "mocha": "^6.2.2",
     "prettier": "^1.19.1",
     "rimraf": "^3.0.0",
@@ -54,7 +54,12 @@
   },
   "license": "GPL-3.0-or-later",
   "dependencies": {
+    "@typechain/ethers-v5": "^10.1.0",
+    "@typechain/hardhat": "^6.1.2",
     "dotenv": "^16.0.3",
-    "hardhat-abi-exporter": "^2.8.0"
+    "hardhat-abi-exporter": "^2.8.0",
+    "hardhat-gas-reporter": "^1.0.8",
+    "solidity-coverage": "^0.8.1",
+    "typechain": "^8.1.0"
   }
 }
